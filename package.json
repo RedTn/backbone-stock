@@ -1,0 +1,62 @@
+{
+  "name": "backbone-stock",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "webpack",
+    "lint": "eslint './**/*.js'",
+    "lint-fix": "eslint --fix ./**/*.js",
+    "size": "size-limit",
+    "start:dev": "webpack-dev-server",
+    "surge": "surge",
+    "test": "npm -v"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.1",
+    "eslint": "^5.16.0",
+    "eslint-config-redtn": "^0.1.2",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5",
+    "node-sass": "^4.11.0",
+    "prettier": "^1.16.4",
+    "raw-loader": "^2.0.0",
+    "sass-loader": "^7.1.0",
+    "size-limit": "^1.0.1",
+    "style-loader": "^0.23.1",
+    "surge": "^0.20.3",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.3.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --single-quote --tab-width 4 --print-width 100 --write",
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "size-limit": [
+    {
+      "path": "dist/bundle.js",
+      "limit": "550 KB"
+    }
+  ],
+  "dependencies": {
+    "backbone": "^1.4.0",
+    "faker": "^4.1.0",
+    "jquery": "^3.4.0",
+    "underscore": "^1.9.1"
+  }
+}
