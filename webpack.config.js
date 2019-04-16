@@ -39,6 +39,6 @@ module.exports = {
     ],
     resolve: {
         extensions: ['.hbs', '.js', '.json', '.scss', '.css'],
-        modules: [path.resolve(__dirname, 'src'), 'node_modules']
+        modules: [path.resolve(__dirname, 'src'), 'node_modules', path.resolve(__dirname)]
     }
 };

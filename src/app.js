@@ -1,10 +1,10 @@
 import Backbone from 'backbone';
-import AppView from 'views/home';
+import HomeView from 'views/home';
 
 const initializeApp = () => {
     Backbone.$(function() {
         // Create an instance of our view
-        new AppView();
+        new HomeView();
     });
 };
 
