@@ -26,18 +26,19 @@ module.exports = {
                 ]
             },
             {
-                test: /\.tpl$/,
-                use: 'raw-loader'
+                test: /\.hbs$/,
+                use: 'handlebars-loader'
             }
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Backbonejs',
-            template: 'src/index.html'
+            title: 'Backbonejs Stock Watcher',
+            template: 'src/index.hbs'
         })
     ],
     resolve: {
+        extensions: ['.hbs', '.js', '.json', '.scss', '.css'],
         modules: [path.resolve(__dirname, 'src'), 'node_modules']
     }
 };
