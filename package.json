@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "build": "webpack",
-    "lint": "eslint './**/*.js'",
+    "lint": "eslint ./**/*.js",
     "lint-fix": "eslint --fix ./**/*.js",
     "size": "size-limit",
     "start:dev": "webpack-dev-server",
