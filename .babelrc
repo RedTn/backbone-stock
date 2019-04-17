@@ -2,5 +2,9 @@
     "presets": [
       "@babel/env"
     ],
-    "plugins": []
+    "plugins": [
+      ["ramda", {
+        "useES": true
+      }]
+    ]
   }

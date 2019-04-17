@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "generate-bundle-stats": "webpack --profile --json > stats.json",
+    "get-bundle-stats": "npm run generate-bundle-stats && npm run view-bundle-stats",
+    "view-bundle-stats": "webpack-bundle-analyzer stats.json",
     "build": "webpack",
     "lint": "eslint ./**/*.js",
     "lint-fix": "eslint --fix ./**/*.js",
@@ -18,6 +21,7 @@
     "@babel/preset-env": "^7.4.3",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
+    "babel-plugin-ramda": "^2.0.0",
     "css-loader": "^2.1.1",
     "eslint": "^5.16.0",
     "eslint-config-redtn": "^0.1.2",
@@ -32,6 +36,7 @@
     "style-loader": "^0.23.1",
     "surge": "^0.20.3",
     "webpack": "^4.30.0",
+    "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.3.1"
   },
@@ -50,15 +55,15 @@
   "size-limit": [
     {
       "path": "dist/bundle.js",
-      "limit": "550 KB"
+      "limit": "210 KB"
     }
   ],
   "dependencies": {
     "backbone": "^1.4.0",
-    "faker": "^4.1.0",
     "handlebars": "^4.1.2",
     "jquery": "^3.4.0",
     "materialize-css": "^1.0.0-rc.2",
+    "ramda": "^0.26.1",
     "underscore": "^1.9.1"
   }
 }
