@@ -8,6 +8,7 @@ export default Backbone.Model.extend({
     urlRoot: `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&apikey=${API_KEY}`,
     initialize() {
         this.on('invalid', (model, error) => {
+            // eslint-disable-next-line no-console
             console.error(error);
         });
     },
