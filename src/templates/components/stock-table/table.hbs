@@ -10,16 +10,8 @@
     </thead>
 
     <tbody>
-        {{> row}}
-        <tr>
-        <td>Alan</td>
-        <td>Jellybean</td>
-        <td>$3.76</td>
-        </tr>
-        <tr>
-        <td>Jonathan</td>
-        <td>Lollipop</td>
-        <td>$7.00</td>
-        </tr>
+        {{#each models}}
+            {{> row}}
+        {{/each}}
     </tbody>
 </table>

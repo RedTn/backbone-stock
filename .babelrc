@@ -13,6 +13,11 @@
     "plugins": [
       ["ramda", {
         "useES": true
-      }]
+      }],
+      ["@babel/plugin-transform-runtime",
+        {
+          "regenerator": true
+        }
+      ]
     ]
   }
