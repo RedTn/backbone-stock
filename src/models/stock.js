@@ -20,9 +20,16 @@ export default Backbone.Model.extend({
         return model;
     },
     defaults: {
-        symbol: '',
+        change: '',
+        'change percent': '',
+        high: '',
+        'latest trading day': '',
+        low: '',
         name: '',
-        price: '',
-        change: ''
+        open: '',
+        'previous close': '',
+        price: '11',
+        symbol: '',
+        volume: ''
     }
 });
