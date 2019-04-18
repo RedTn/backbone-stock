@@ -57,11 +57,12 @@
   "size-limit": [
     {
       "path": "dist/bundle.js",
-      "limit": "215 KB"
+      "limit": "217 KB"
     }
   ],
   "dependencies": {
     "backbone": "^1.4.0",
+    "backbone-computed-properties": "^0.3.0",
     "handlebars": "^4.1.2",
     "jquery": "^3.4.0",
     "materialize-css": "^1.0.0-rc.2",

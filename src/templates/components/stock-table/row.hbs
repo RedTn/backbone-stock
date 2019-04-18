@@ -1,7 +1,7 @@
 <tr>
     <td>{{attributes.symbol}}</td>
     <td>{{attributes.price}}</td>
-    <td>{{attributes.change}}</td>
-    <td>{{attributes.[change percent]}}</td>
+    <td {{#if attributes.positiveChange}}class="positive-text"{{else}}class="negative-text"{{/if}}>{{attributes.change}}</td>
+    <td {{#if attributes.positiveChange}}class="positive-text"{{else}}class="negative-text"{{/if}}>{{attributes.[change percent]}}</td>
     <td>{{attributes.volume}}</td>
 </tr>
