@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/RedTn/backbone-stock.svg?style=svg)](https://circleci.com/gh/RedTn/backbone-stock)
+[![CircleCI](https://circleci.com/gh/RedTn/backbone-stock.svg?style=svg)](https://circleci.com/gh/RedTn/backbone-stock) [![Greenkeeper badge](https://badges.greenkeeper.io/RedTn/backbone-stock.svg)](https://greenkeeper.io/)
 
 # Stock watcher
 Built in BackboneJS
