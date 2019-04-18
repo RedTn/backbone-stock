@@ -1160,7 +1160,16 @@ babel-plugin-ramda@^2.0.0:
     "@babel/helper-module-imports" "^7.0.0"
     ramda "^0.25.0"
 
-backbone@^1.4.0:
+backbone-computed-properties@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/backbone-computed-properties/-/backbone-computed-properties-0.3.0.tgz#f2b2897fef012e8514009d87dd0de517c2622be6"
+  integrity sha1-8rKJf+8BLoUUAJ2H3Q3lF8JiK+Y=
+  dependencies:
+    backbone "^1.1.2"
+    jquery "^1.11.1"
+    underscore "^1.7.0"
+
+backbone@^1.1.2, backbone@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/backbone/-/backbone-1.4.0.tgz#54db4de9df7c3811c3f032f34749a4cd27f3bd12"
   integrity sha512-RLmDrRXkVdouTg38jcgHhyQ/2zjg7a8E6sz2zxfz21Hh17xDJYUHBZimVIt5fUyS8vbfpeSmTL3gUjTEvUV3qQ==
@@ -4130,6 +4139,11 @@ isstream@0.1.x, isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
   integrity sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=
+
+jquery@^1.11.1:
+  version "1.12.4"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-1.12.4.tgz#01e1dfba290fe73deba77ceeacb0f9ba2fec9e0c"
+  integrity sha1-AeHfuikP5z3rp3zurLD5ui/sngw=
 
 jquery@^3.4.0:
   version "3.4.0"
@@ -7390,7 +7404,7 @@ uglify-js@^3.1.4:
     commander "~2.20.0"
     source-map "~0.6.1"
 
-underscore@>=1.8.3, underscore@^1.9.1:
+underscore@>=1.8.3, underscore@^1.7.0, underscore@^1.9.1:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.9.1.tgz#06dce34a0e68a7babc29b365b8e74b8925203961"
   integrity sha512-5/4etnCkd9c8gwgowi5/om/mYO5ajCaOgdzj/oW+0eQV9WxKBDZw5+ycmKmeaTXjInS/W0BzpGLo2xR2aBwZdg==

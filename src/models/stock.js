@@ -1,6 +1,7 @@
 import Backbone from 'backbone';
 import * as R from 'ramda';
 import { API_KEY } from 'config/default';
+import Computed from 'backbone-computed-properties';
 
 const renameKeysWith = R.curry((fn, obj) => R.fromPairs(R.map(R.adjust(0, fn), R.toPairs(obj))));
 
@@ -20,6 +21,9 @@ export default Backbone.Model.extend({
         const model = renameKeysWith(R.drop(4), globalQuote);
         return model;
     },
+    positiveChange: Computed('change', function() {
+        return Math.sign(parseInt(this.get('change'))) === 1;
+    }),
     defaults: {
         change: '',
         'change percent': '',
