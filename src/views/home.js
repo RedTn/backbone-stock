@@ -4,6 +4,7 @@ import 'styles/home';
 import stockModel from 'models/stock';
 import stockCollection from 'collections/stock';
 import $ from 'jquery';
+import { debounce } from 'debounce';
 
 const initialStocks = ['SPLK', 'FTNT'];
 
@@ -26,14 +27,14 @@ const viewOptions = {
         });
         const resolvedModels = await Promise.all(promises);
         this.collection = new stockCollection(resolvedModels);
+        this.collection.on('add', this.render, this);
 
         this.render();
-
-        this.collection.on('add', this.render, this);
     },
 
     events: {
-        'submit .stock-form': 'handleSubmit'
+        'submit .stock-form': 'handleSubmit',
+        'keypress .stock-form': 'handleKeyPress'
     },
 
     handleSubmit: function(event) {
@@ -51,6 +52,8 @@ const viewOptions = {
         }
         symbolElement.value = '';
     },
+
+    handleKeyPress: debounce(function() {}, 300),
 
     render() {
         this.$el.html(this.template(this.collection));
