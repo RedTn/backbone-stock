@@ -1,6 +1,6 @@
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -20,9 +20,9 @@ module.exports = {
             {
                 test: /\.(sa|sc|c)ss$/,
                 use: [
-                    'style-loader', // creates style nodes from JS strings
+                    MiniCssExtractPlugin.loader,
                     'css-loader', // translates CSS into CommonJS
-                    'sass-loader' // compiles Sass to CSS, using Node Sass by default
+                    'sass-loader' // compiles Sass to CSS, using Node Sass by
                 ]
             },
             {
@@ -32,12 +32,17 @@ module.exports = {
         ]
     },
     plugins: [
-        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             title: 'Backbonejs Stock Watcher',
             template: 'src/index.hbs'
-        })
+        }),
+        new MiniCssExtractPlugin()
     ],
+    optimization: {
+        splitChunks: {
+            chunks: 'all'
+        }
+    },
     resolve: {
         extensions: ['.hbs', '.js', '.json', '.scss', '.css'],
         modules: [path.resolve(__dirname, 'src'), 'node_modules', path.resolve(__dirname)]
