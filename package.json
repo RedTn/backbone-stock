@@ -19,6 +19,7 @@
   "devDependencies": {
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/plugin-transform-runtime": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
     "babel-eslint": "^10.0.1",
@@ -28,6 +29,8 @@
     "css-loader": "^2.1.1",
     "eslint": "^5.16.0",
     "eslint-config-redtn": "^0.1.2",
+    "eslint-import-resolver-webpack": "^0.11.1",
+    "eslint-plugin-import": "^2.17.2",
     "handlebars-loader": "^1.7.1",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^1.3.1",
@@ -61,11 +64,15 @@
   },
   "size-limit": [
     {
-      "path": "dist/bundle.js",
+      "path": "dist/home.lazy.bundle.js",
+      "limit": "1 KB"
+    },
+    {
+      "path": "dist/main.bundle.js",
       "limit": "3 KB"
     },
     {
-      "path": "dist/1.bundle.js",
+      "path": "dist/vendors~main.bundle.js",
       "limit": "93 KB"
     },
     {

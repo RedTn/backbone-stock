@@ -5,10 +5,23 @@
     "node": true
   },
   "extends": [
-    "redtn"
+    "redtn",
+    "plugin:import/errors"
   ],
   "globals": {
     "M": "readonly"
   },
-  "parser": "babel-eslint"
+  "parser": "babel-eslint",
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": {
+          "resolve": {
+            "extensions": [".hbs", ".js", ".json", ".scss", ".css"],
+            "modules": ["node_modules", "./"]
+          }
+        }
+      }
+    }
+  }
 }

@@ -39,18 +39,11 @@ const viewOptions = {
 
     handleSubmit: function(event) {
         event.preventDefault();
-        const symbolElement = $('#stock-input')[0];
-        const { value: symbol } = symbolElement;
-        if (symbol && typeof symbol === 'string') {
-            const model = new stockModel();
-            model.fetch({
-                data: $.param({ symbol: symbol.toUpperCase() }),
-                success: model => {
-                    this.collection.add(model);
-                }
-            });
-        }
-        symbolElement.value = '';
+        return import(/* webpackChunkName: "home.lazy" */ './home.lazy').then(
+            ({ default: { handleSubmit } }) => {
+                return handleSubmit(this);
+            }
+        );
     },
 
     handleKeyPress: debounce(function() {}, 300),
