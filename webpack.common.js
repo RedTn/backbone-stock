@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -28,6 +29,12 @@ module.exports = {
             {
                 test: /\.hbs$/,
                 use: 'handlebars-loader'
+            },
+            {
+                test: /backbone\.js$/,
+                use: {
+                    loader: 'imports-loader?define=>false'
+                }
             }
         ]
     },
@@ -36,7 +43,8 @@ module.exports = {
             title: 'Backbonejs Stock Watcher',
             template: 'src/index.hbs'
         }),
-        new MiniCssExtractPlugin()
+        new MiniCssExtractPlugin(),
+        new webpack.IgnorePlugin(/^jquery$/)
     ],
     optimization: {
         splitChunks: {

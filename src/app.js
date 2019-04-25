@@ -1,11 +1,14 @@
-import Backbone from 'backbone';
 import HomeView from 'views/home';
 
 const initializeApp = () => {
-    Backbone.$(function() {
-        // Create an instance of our view
-        new HomeView();
-    });
+    document.addEventListener(
+        'DOMContentLoaded',
+        function() {
+            // Code to run when the DOM has loaded.
+            new HomeView();
+        },
+        false
+    );
 };
 
 export default initializeApp;

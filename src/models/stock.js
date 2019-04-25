@@ -13,9 +13,6 @@ export default Backbone.Model.extend({
             console.error(error);
         });
     },
-    fetch(options) {
-        return Backbone.Model.prototype.fetch.call(this, options);
-    },
     parse(data) {
         const { 'Global Quote': globalQuote = {} } = data || {};
         const model = renameKeysWith(R.drop(4), globalQuote);

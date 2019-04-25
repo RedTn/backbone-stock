@@ -1,5 +1,5 @@
-import Backbone from 'backbone';
+import View from 'backbone.nativeview';
 
-export default Backbone.View.extend({
+export default View.extend({
     el: '#app'
 });

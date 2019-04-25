@@ -3,8 +3,12 @@ import template from 'templates/home';
 import 'styles/home';
 import stockModel from 'models/stock';
 import stockCollection from 'collections/stock';
-import $ from 'jquery';
 import { debounce } from 'debounce';
+import param from 'jquery-param';
+import Backbone from 'backbone';
+import nativeAjax from 'backbone.nativeajax';
+
+Backbone.ajax = nativeAjax;
 
 const initialStocks = ['SPLK', 'FTNT'];
 
@@ -18,7 +22,7 @@ const viewOptions = {
             const model = new stockModel();
             return new Promise(resolve => {
                 model.fetch({
-                    data: $.param({ symbol }),
+                    data: param({ symbol }),
                     success: model => {
                         resolve(model);
                     }
@@ -49,7 +53,7 @@ const viewOptions = {
     handleKeyPress: debounce(function() {}, 300),
 
     render() {
-        this.$el.html(this.template(this.collection));
+        this.el.innerHTML = this.template(this.collection);
         return this;
     }
 };
