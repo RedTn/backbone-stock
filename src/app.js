@@ -1,11 +1,9 @@
 import Backbone from 'backbone';
-import HomeView from 'views/home';
+import router from 'routes/router';
 
 const initializeApp = () => {
-    Backbone.$(function() {
-        // Create an instance of our view
-        new HomeView();
-    });
+    new router();
+    Backbone.history.start();
 };
 
 export default initializeApp;
