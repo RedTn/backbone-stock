@@ -26,7 +26,7 @@
     "babel-loader": "^8.0.5",
     "babel-plugin-ramda": "^2.0.0",
     "clean-webpack-plugin": "^2.0.1",
-    "css-loader": "^2.1.1",
+    "css-loader": "^3.0.0",
     "eslint": "^5.16.0",
     "eslint-config-redtn": "^0.1.2",
     "eslint-import-resolver-webpack": "^0.11.1",
