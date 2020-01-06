@@ -92,6 +92,6 @@
     "jquery": "^3.4.0",
     "materialize-css": "^1.0.0-rc.2",
     "ramda": "^0.26.1",
-    "underscore": "^1.9.1"
+    "underscore": "^1.9.2"
   }
 }
