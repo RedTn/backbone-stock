@@ -44,7 +44,7 @@
     "style-loader": "^1.0.0",
     "surge": "^0.21.0",
     "terser-webpack-plugin": "^2.1.0",
-    "webpack": "^4.39.3",
+    "webpack": "^4.41.6",
     "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.3.1",
