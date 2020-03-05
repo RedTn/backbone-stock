@@ -40,7 +40,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "prettier": "^1.16.4",
     "sass-loader": "^7.1.0",
-    "size-limit": "^1.0.1",
+    "size-limit": "^4.1.1",
     "style-loader": "^1.0.0",
     "surge": "^0.21.0",
     "terser-webpack-plugin": "^2.1.0",
