@@ -41,7 +41,7 @@
     "prettier": "^1.16.4",
     "sass-loader": "^7.1.0",
     "size-limit": "^1.0.1",
-    "style-loader": "^1.0.0",
+    "style-loader": "^1.2.1",
     "surge": "^0.21.0",
     "terser-webpack-plugin": "^2.1.0",
     "webpack": "^4.39.3",
